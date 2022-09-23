@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Easy Password Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container generator">
+        <p class="generator__title">
+            Random Password Generator
+        </p>
+        <p class="generator__subtitle">
+           Use this generator to instantly create a secure, random password
+        </p>
+        <div class="generator__result">
+            <input type="text" class="generator__input_white">
+            <textarea name="" id="textarea-password" cols="30" rows="10"></textarea>
+            <div class="generator__image block-img btn-copy">
+              <img src="image/copy.png" alt="copy" class="block-img__img"/>
+            </div>
+            <div class="generator__image block-img btn-generate">
+                <img src="image/generate.png" alt="generate" class="block-img__img"/>
+              </div>
+            <div class="generator__difficulty"></div>
+        </div>
+        <div class="row">
+            <div class="first-column">
+                <p class="generator__text">Password length: <span  class="generator__length">10</span></p>
+            </div>
+            <div class="second-column generator__range">
+                <button class="generator__button_range_minus"></button>
+                <input type="range" class="generator__input_type_range" min="5" max="50" value="10" step="1">
+                <button class="generator__button_range_plus"></button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="first-column">
+                <p class="generator__text">Characters used: </p>
+            </div>
+            <div class="second-column generator__characters">
+                <p class="characters-error hide">*You must choose at least 1 Characters</p>
+                <div class="generator__group">
+                    <input type="checkbox" class="generator__input_type_checkbox" id="ch1" checked>
+                    <label for="ch1">Uppercase</label>
+                </div>
+                <div class="generator__group">
+                    <input type="checkbox" class="generator__input_type_checkbox"  id="ch2" checked>
+                    <label for="ch2">Lovercase</label>
+                </div>
+                <div class="generator__group">
+                    <input type="checkbox" class="generator__input_type_checkbox"  id="ch3">
+                    <label for="ch3">Numbers</label>
+                </div>
+                <div class="generator__group">
+                    <input type="checkbox" class="generator__input_type_checkbox"  id="ch4">
+                    <label for="ch4">Symbols</label>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
